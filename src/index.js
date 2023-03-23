@@ -63,12 +63,20 @@ function onLoadMoreClick() {
   fetchImages(searchQuery, page)
     .then(({ data }) => {
       renderGallery(data.hits);
+
+      const totalPages = Math.ceil(data.totalHits / PER_PAGE);
+      const { height: cardHeight } = document
+        .querySelector('.gallery')
+        .firstElementChild.getBoundingClientRect();
       lightBox = new SimpleLightbox('.gallery a', {
         captionsData: 'alt',
         captionDelay: 250,
       }).refresh();
 
-      const totalPages = Math.ceil(data.totalHits / PER_PAGE);
+      window.scrollBy({
+        top: cardHeight * 2,
+        behavior: 'smooth',
+      });
 
       if (page === totalPages) {
         loadMoreRef.classList.add('is-hidden');
