@@ -1,4 +1,3 @@
-import './sass/index.scss';
 import Notiflix from 'notiflix';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
@@ -18,6 +17,7 @@ loadMoreRef.addEventListener('click', onLoadMoreClick);
 
 function onSearchForm(e) {
   e.preventDefault();
+
   galleryRef.innerHTML = '';
   loadMoreRef.classList.add('is-hidden');
 
