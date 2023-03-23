@@ -1,1 +1,30 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: #212121;
+}
+
+body {
+  background-color: rgba(33, 150, 243, 0.1);
+
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: #212121;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
